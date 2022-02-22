@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "projeto4",
+  "version": "0.0.1",
+  "description": "projeto api modulo 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js"
+  },
+  "author": "Filipe",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "node-fetch": "^3.2.0"
+  }
+}
