@@ -7,12 +7,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/index.js",
-    "exp":"node ./src/logica/import.js"
+    "exp": "node ./src/logica/import.js",
+    "dev":"nodemon ./src/index.js"
   },
   "author": "Filipe",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
     "node-fetch": "^3.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

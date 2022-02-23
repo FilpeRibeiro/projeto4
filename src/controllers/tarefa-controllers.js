@@ -1,6 +1,13 @@
 const tarefaCont = (app)=>{
     app.get('/tarefa', (req ,res)=>{
-    res.send(`Corithians` )
+        res.send(`Corithians com nodemom` )
+    })
+    app.post('/tarefa',(req ,res)=>{
+        res.json({
+            "marca":"nike",
+            "modelo":"tenis",
+            "ano":2022
+        })
     })
 }
 
