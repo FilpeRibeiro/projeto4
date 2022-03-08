@@ -1,13 +1,19 @@
 import express from "express"
 import usuarioCont from "./controllers/usuario-controllers.js";
 import tarefaCont from "./controllers/tarefa-controllers.js";
+import middleware from "./Middleware/midd.js";
+import db from './database/db.js'
 
 const app = express()
 const port = 3000
 
-usuarioCont(app)
 
-tarefaCont(app)
+middleware (app .db)
+
+usuarioCont(app .db)
+
+tarefaCont(app, db)
+
 
 
 app.listen(port , ()=>{
