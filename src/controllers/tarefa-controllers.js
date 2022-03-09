@@ -19,7 +19,7 @@ const tarefaCont = (app ,db)=>{
     })
     app.get('/tarefa', (req, res)=>{
         // Buscando informações no banco de dados
-        const todasTarefas = bd.tarefas
+        const todasTarefas = db.tarefas
 
         //Resposta com o retorno daquilo que eu busquei
         res.json({
@@ -56,7 +56,25 @@ const tarefaCont = (app ,db)=>{
             })
         }
     })
+
+    app.get('/tarefa/email/:email' ,(req,res)=>{
+        const email = req.params.email
+        const usuarioEncontrado = db.usuario.filter(usuario.email == email)
+        res.json({
+            "usuario": usuarioEncontrado
+        })
+    
+   })
+   app.delete('/tarefa/email/:email' ,(req,res)=>{
+       const email = req.params.email
+       const novoDB = db.usuario.filter(usuario.email !== email)
+       db.usuario = novoDB
+       res.json({
+           "msg":"Usuario deletado"
+       })
+   })
 }
+
 
 
 export  default tarefaCont 
