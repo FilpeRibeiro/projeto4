@@ -8,13 +8,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/index.js",
     "exp": "node ./src/logica/import.js",
-    "dev":"nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js"
   },
   "author": "Filipe",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
-    "node-fetch": "^3.2.0"
+    "node-fetch": "^3.2.0",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
