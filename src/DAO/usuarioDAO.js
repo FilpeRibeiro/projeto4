@@ -38,6 +38,7 @@ class UsuarioDao {
          })
     
         }
+        
         inseriUsuario =(usuarioNovo) =>{
             return new Promise((resolve, reject)=>{
                 this.db.run("INSERT INTO USUARIOS(NOME, EMAIL, SENHA) VALUES (?, ?, ?)",usuarioNovo.nome, usuarioNovo.email, usuarioNovo.senha, (error)=>{
