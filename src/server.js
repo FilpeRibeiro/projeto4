@@ -1,7 +1,7 @@
 import app from "./app.js"
 
 
-const port = 3000
+const port = 3020
 
 
 app.listen(port , ()=>{

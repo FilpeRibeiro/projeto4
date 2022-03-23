@@ -4,15 +4,15 @@ import UsuarioDao from "../DAO/usuarioDAO.js"
 const usuarioCont =(app ,db) =>{
 
     const usuarioD = new UsuarioDao(db)
-    app.get('/usuario', (req, res)=>{
-        usuarioD.pegaUsuario()
-        .then((resposta)=>{
-            res.json(resposta)
-        })
-        .catch((erro)=>{
+    app.get('/usuario',async (req, res)=>{
+        try{
+           const pegaUsuario = usuarioD.pegaUsuario()
+           res.json(pegaUsuario)
+        }catch(erro){
             res.json(erro)
-        })
+        }
         
+       
         
     })
     
